@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <linearGradient id="apexGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#696cff"/>
+      <stop offset="100%" stop-color="#3f51b5"/>
+    </linearGradient>
+    <linearGradient id="apexGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#03c3ec"/>
+      <stop offset="100%" stop-color="#696cff"/>
+    </linearGradient>
+    <linearGradient id="apexGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#71dd37"/>
+      <stop offset="100%" stop-color="#03c3ec"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#696cff" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Modern Geometric Apex Emblem -->
+  <g transform="translate(6, 6)" filter="url(#glow)">
+    <!-- Base Shape -->
+    <rect x="0" y="0" width="48" height="48" rx="12" fill="url(#apexGrad1)"/>
+    <!-- Triangular Overlays / Apex Geometry -->
+    <path d="M24 8 L40 38 L8 38 Z" fill="white" fill-opacity="0.15"/>
+    <path d="M24 13 L36 36 L12 36 Z" fill="url(#apexGrad2)" fill-opacity="0.9"/>
+    <!-- Central Modern Apex Diamond & Checkmark -->
+    <polygon points="24,18 31,29 24,40 17,29" fill="#ffffff" fill-opacity="0.95"/>
+    <circle cx="24" cy="29" r="4.5" fill="#696cff"/>
+    <circle cx="36" cy="14" r="3" fill="#71dd37"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="66" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Public Sans', 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" letter-spacing="0.5" fill="#566a7f">
+    APEX<tspan fill="#696cff">PMS</tspan>
+  </text>
+  <rect x="180" y="16" width="76" height="18" rx="4" fill="#696cff" fill-opacity="0.12"/>
+  <text x="218" y="29" font-family="-apple-system, BlinkMacSystemFont, 'Public Sans', 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" letter-spacing="1" fill="#696cff" text-anchor="middle">
+    ENTERPRISE
+  </text>
+  <text x="66" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Public Sans', 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="500" letter-spacing="1.5" fill="#a1acb8">
+    PROJECT ORCHESTRATION
+  </text>
+</svg>
