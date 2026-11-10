@@ -65,11 +65,23 @@
                         </div>
                     </div>
 
-                    <div class="mt-4 pt-3 border-top d-flex gap-2">
-                        <button type="submit" class="btn btn-primary px-4"><i class="bx bx-save me-1"></i> Update Specialist</button>
-                        <a href="{{ route('team.index') }}" class="btn btn-outline-secondary">Cancel</a>
+                    <div class="mt-4 pt-3 border-top d-flex justify-content-between align-items-center">
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary px-4"><i class="bx bx-save me-1"></i> Update Specialist</button>
+                            <a href="{{ route('team.index') }}" class="btn btn-outline-secondary">Cancel</a>
+                        </div>
                     </div>
                 </form>
+
+                @if(auth()->id() !== $user->id)
+                <div class="mt-3 pt-3 border-top text-end">
+                    <form action="{{ route('team.destroy', $user) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this specialist account?');" class="d-inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-outline-danger"><i class="bx bx-trash me-1"></i> Delete Specialist</button>
+                    </form>
+                </div>
+                @endif
             </div>
         </div>
     </div>

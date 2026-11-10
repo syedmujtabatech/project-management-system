@@ -69,6 +69,11 @@ class TeamController extends Controller
         return redirect()->route('team.index')->with('success', 'Team member added successfully!');
     }
 
+    public function show(User $user)
+    {
+        return redirect()->route('team.edit', $user);
+    }
+
     public function edit(User $user)
     {
         return view('team.edit', compact('user'));
@@ -106,6 +111,20 @@ class TeamController extends Controller
         ActivityLog::log('Updated Team Member', "Updated details for: {$user->name}");
 
         return redirect()->route('team.index')->with('success', 'Team member details updated!');
+    }
+
+    public function destroy(User $user)
+    {
+        if ($user->id === auth()->id()) {
+            return back()->with('error', 'You cannot delete your own active session account.');
+        }
+
+        $name = $user->name;
+        $user->delete();
+
+        ActivityLog::log('Deleted Team Member', "Deleted team member account: {$name}");
+
+        return redirect()->route('team.index')->with('success', "Specialist {$name} removed successfully.");
     }
 
     public function toggleActive(User $user)

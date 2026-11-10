@@ -55,7 +55,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/timelogs/{timelog}', [TimeLogController::class, 'destroy'])->name('timelogs.destroy');
 
     // Team
-    Route::resource('team', TeamController::class);
+    Route::resource('team', TeamController::class)->parameters(['team' => 'user']);
     Route::post('/team/{user}/toggle', [TeamController::class, 'toggleActive'])->name('team.toggle');
 
     // Reports
