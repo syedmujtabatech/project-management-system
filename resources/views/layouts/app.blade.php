@@ -169,8 +169,6 @@
                                 — High-Performance Project Management Architecture
                             </div>
                             <div>
-                                <span class="badge bg-label-primary me-2">Laravel 12.x</span>
-                                <span class="badge bg-label-info">Sneat UI v1.0</span>
                                 <span class="badge bg-label-success">Enterprise Edition</span>
                             </div>
                         </div>
